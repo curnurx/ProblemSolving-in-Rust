@@ -14,13 +14,14 @@ impl Config {
 
         let mut cfgs = Vec::new();
         loop {
-            let cfg = Config {
-                a: input.next().unwrap(),
-                b: input.next().unwrap(),
-            };
-            if cfg.a == 0 && cfg.b == 0 {
+            let a = input.next().unwrap();
+            let b = input.next().unwrap();
+
+            if a == 0 && b == 0 {
                 break;
             }
+
+            let cfg = Config { a, b };
             cfgs.push(cfg);
         }
         cfgs
